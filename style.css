@@ -1,0 +1,72 @@
+.body {
+    /* make coloured edges */
+    background-color: #202124;
+    margin: 0px;
+    padding: 10px;
+    border: 3px solid #1c98ec;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.input {
+    background-color: hsl(225, 6%, 26%);
+    margin: 6px;
+    border-radius: 5px;
+    color: white;
+}
+.get {
+    padding-left: 75px;
+    padding-right: 75px;
+    margin: 8px;
+    background-color: hsl(184, 12%, 47%);
+    color: white;
+    border: 0px;
+}
+h2 {
+    margin: 0px;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: hwb(204 56% 9%);
+}
+h3 {
+    margin: 3px;
+    margin-bottom: 13px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 15px;
+    font-weight: 40;
+    color:hwb(203 76% 11%)
+}
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    border-radius: 20px;
+    background: #ffffff; /* Grey background */
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    height: 25px; /* Slider handle height */
+    width: 6px;
+    background: #0fb4ca; /* Green background */
+    border-color: #36475275;
+    border-radius: 10;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
