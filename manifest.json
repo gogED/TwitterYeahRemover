@@ -1,0 +1,46 @@
+{
+    "name": "Twitteryeahremover",
+    "version": "0.2.1",
+    "description": "A simple Twitter yeah remover tool",
+    "manifest_version": 3,
+    "author": "literally anyone",
+    "homepage_url": "https://github.com/gogED/TwitRater",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "TwitRater",
+        
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "browser_specific_settings": {
+
+        "gecko": {
+            "id": "@TwitRater",
+            "strict_min_version": "42.0"
+          }
+
+    },   
+    "permissions": ["webRequest","<all_urls>"],
+    "web_accessible_resources" : [
+        {
+            "resources": ["ocrad.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "background": {
+    "scripts": ["ocrad.js", "background.js"]
+
+},
+    "content_scripts": [{
+            "matches": ["https://twitter.com/*/status/*", "https://x.com/*/status/*"],
+            "js": ["content.js", "ocrad.js"]
+        }]
+}
